@@ -1,0 +1,37 @@
+
+ ALGORITHME Write
+
+VAR    
+
+       
+BEGIN
+Write('donner une phrase')
+read(sentence)
+        let numword =0; 
+        FOR (var i=0;i<=sentence.length;i++)
+        IF (sentence[i]==" ") THEN
+         numword++;
+        END_IF
+        END_FOR
+        i=0;
+        var coutvow=0;
+        while(sentence[i]!='.')
+        {
+            if (sentence[i]='a'||sentence[i]='e'||sentence[i]='i'||sentence[i]='u'||sentence[i]='o'||sentence[i]='y')
+            {
+                coutvow++;
+                i++;
+            }
+            else
+            {
+                i++;
+            }
+
+        }
+        return ("le nbr de caractere est",sentence.length,"et le nbr de words est",numword++,"et le nbr de vow",coutvow++)
+        
+    
+
+
+
+END
