@@ -1,0 +1,60 @@
+
+ ALGORITHME orthog
+
+VAR
+     LV1:ARRAY_OF ARRAYS
+     LV2:ARRAY_OF ARRAYS
+     scalaire,i,j:INTEGER  
+BEGIN
+FOR i FROM 0 TO LV1.length STEP 1  DO
+    FOR j FROM 0 TO LV2.length STEP step  DO
+        DotProduct(LV1[i].LV2[j],scalaire)
+        IF (scalaire=0) THEN
+            write("les deux vecteurs sont orthog")
+        ELSE
+            write("ne sont pas orthog")
+        END_IF
+    END_FOR
+END_FOR
+END
+PROCEDURE DotProduct(V1,V2:ARRAY_OF FLOAT,VAR dot:INTEGER)
+VAR
+    i:INTEGER
+BEGIN
+    dot:=0
+    IF (V1.length>V2.length) THEN
+      write("the length is not equal")
+    ELSE
+        FOR i FROM 0 TO V1.length STEP 1 DO
+            dot:=dot+V1[i]*V2[i]
+        END_FOR
+        write(dot)
+    END_IF
+END
+FUNCTION DotProdcut(V1,V2:ARRAY_OF FLOAT) : FLOAT
+VAR
+i:INTEGER;
+BEGIN
+    FOR i FROM 0 TO V1.length STEP 1  DO
+        dot:=dot+V1[i]*V2[i]
+    END_FOR
+    write(dot)
+    RETURN dot ;
+END
+ALGORITHME orthog
+VAR
+
+    LV1:ARRAY_OF ARRAYS
+    LV2:ARRAY_OF ARRAYS
+    scalaire,i,j:INTEGER  
+BEGIN
+FOR i FROM 0 TO LV1.length STEP 1  DO
+ FOR j FROM 0 TO LV2.length STEP step  DO
+    IF (V1.length<>V2.length) THEN
+    write("the length is not equal")
+    ELSE
+    scalaire:=DotProdcut(LV1[i];LV2[j])
+        END_IF
+    END_FOR
+END_FOR
+END
