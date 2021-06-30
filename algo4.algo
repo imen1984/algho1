@@ -1,0 +1,22 @@
+
+ ALGORITHME SortSelections
+
+VAR
+    tab:ARRAY_OF INTEGER[100] 
+    i,j:INTEGER;  
+BEGIN
+FOR i FROM 1 TO tab.length STEP step  DO
+j:=i
+WHILE (j>0 AND tab[j]<tab[j-1]) DO
+    Permute(tab[j],tab[j-1])
+END_WHILE
+END_FOR
+END
+PROCEDURE permute(VAR a,b:INTEGER)
+VAR
+    temp:INTEGER
+BEGIN
+    temp:=a 
+    a:=b 
+    b:=temp
+END
